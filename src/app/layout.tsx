@@ -23,12 +23,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Provider store={store}>
           <div className="flex flex-1">
             {/* Sidebar */}
-            <div className="w-72 lg:w-1/4 hidden bg-gray-200 dark:bg-gray-800">
+            <div className='h-screen fixed z-[201]'>
               <Sidebar />
             </div>
 
             {/* Main content area */}
-            <main className="flex-1 overflow-auto p-4">
+            <main className="flex-1 lg:ml-64 overflow-auto p-4">
               {children}
               <Footer />
               <ToggleButton />

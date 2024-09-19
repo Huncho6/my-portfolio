@@ -1,3 +1,4 @@
+// components/Sidebar.tsx
 "use client";
 import { useAppSelector } from "@/app/hooks";
 import Link from "next/link";
@@ -25,19 +26,20 @@ const Sidebar = () => {
   }, [texts.length]);
 
   return (
-    <div>
+    <div className="relative h-screen dark:bg-gray-800">
       {/* Hamburger Icon for small screens */}
-      <div className="md:hidden p-4">
-        <button onClick={toggleSidebar} className="text-3xl">
+      <div className="fixed top-4 left-4 md:hidden" style={{ zIndex: 1000 }}>
+        <button onClick={toggleSidebar} className="text-3xl absolute z-20 top-0 bg-purple-700">
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 p-4 z-40 transition-transform transform ${
+        className={`fixed top-0 left-0 h-screen w-64 p-4 z-40 transition-transform transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 ${isDarkMode ? "bg-gray-900 text-gray-100" : "bg-white text-black"} md:static md:flex md:flex-col md:w-64`}
+        } md:translate-x-0 ${isDarkMode ? "bg-gray-900 text-gray-100" : "bg-white text-black"} 
+        md:static md:flex md:flex-col md:w-64 overflow-auto`}
       >
         {/* Profile Image */}
         <div className="flex flex-col items-center">
@@ -62,43 +64,43 @@ const Sidebar = () => {
 
         {/* Social Icons */}
         <div className="flex justify-center space-x-4 mt-4">
-          <a
+          <Link
             href="https://www.instagram.com/tuneshii/"
             target="_blank"
             rel="noopener noreferrer"
             className={`hover:text-green-500 text-3xl ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
           >
             <FaInstagram />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.linkedin.com/in/ibrahim-abodunrin-8b93872b0/"
             target="_blank"
             rel="noopener noreferrer"
             className={`hover:text-green-500 text-3xl ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
           >
             <FaLinkedin />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/Huncho6"
             target="_blank"
             rel="noopener noreferrer"
             className={`hover:text-green-500 text-3xl ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
           >
             <FaGithub />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://x.com/ibroabodunrin"
             target="_blank"
             rel="noopener noreferrer"
             className={`hover:text-green-500 text-3xl ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
           >
             <FaXTwitter />
-          </a>
+          </Link>
         </div>
 
         {/* Navigation Links */}
         <nav className="flex flex-col w-full mt-8">
-          <Link href="#home">
+          <Link href="#home" onClick={toggleSidebar}>
             <p
               className={`py-2 flex flex-row gap-2 border-t ${
                 isDarkMode ? "border-gray-700 text-gray-500 hover:text-green-400" : "border-gray-300 hover:text-green-500"
@@ -107,7 +109,7 @@ const Sidebar = () => {
               <FaHome className="text-2xl" /> Home
             </p>
           </Link>
-          <Link href="#about">
+          <Link href="#about" onClick={toggleSidebar}>
             <p
               className={`py-2 flex flex-row gap-2 border-t ${
                 isDarkMode ? "border-gray-700 text-gray-500 hover:text-green-400" : "border-gray-300 hover:text-green-500"
@@ -116,7 +118,7 @@ const Sidebar = () => {
               <IoPersonOutline className="text-2xl" /> About
             </p>
           </Link>
-          <Link href="#projects">
+          <Link href="#projects" onClick={toggleSidebar}>
             <p
               className={`py-2 flex flex-row gap-2 border-t ${
                 isDarkMode ? "border-gray-700 text-gray-500 hover:text-green-400" : "border-gray-300 hover:text-green-500"
@@ -125,7 +127,7 @@ const Sidebar = () => {
               <FaBriefcase className="text-2xl" /> Works
             </p>
           </Link>
-          <Link href="#skills">
+          <Link href="#skills" onClick={toggleSidebar}>
             <p
               className={`py-2 flex flex-row gap-2 border-t ${
                 isDarkMode ? "border-gray-700 text-gray-500 hover:text-green-400" : "border-gray-300 hover:text-green-500"
@@ -134,7 +136,7 @@ const Sidebar = () => {
               <FaCode className="text-2xl" /> Skills
             </p>
           </Link>
-          <Link href="#contact">
+          <Link href="#contact" onClick={toggleSidebar}>
             <p
               className={`py-2 flex flex-row gap-2 border-t border-b ${
                 isDarkMode ? "border-gray-700 text-gray-500 hover:text-green-400" : "border-gray-300 hover:text-green-500"
