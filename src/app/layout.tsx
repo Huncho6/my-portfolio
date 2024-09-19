@@ -1,3 +1,4 @@
+"use client";
 import './globals.css';
 import { Oswald } from 'next/font/google';
 import { Provider } from 'react-redux';
