@@ -1,7 +1,7 @@
 "use client";
 import "./globals.css";
 import { Oswald } from 'next/font/google';
-import Sidebar from "@/components/Sidebar";
+// import Sidebar from "@/components/Sidebar";
 import { Provider } from "react-redux";
 import { store } from "../app/store";
 import Footer from "@/components/Footer";
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Provider store={store}>
           {/* Sidebar */}
           <div className="w-72">
-            <Sidebar />
+            {/* <Sidebar /> */}
           </div>
 
           {/* Main content area */}

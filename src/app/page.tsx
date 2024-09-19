@@ -6,53 +6,37 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 
+
 export default function Main() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Simulate a page loading delay (use actual conditions in a real-world app)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 200); 
+    }, 200); // Adjust the time as per your actual loading duration
 
+    // Cleanup the timer
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div>
       {loading ? (
+        // Show the spinner while loading is true
         <div className="flex items-center justify-center h-screen">
           <div className="animate-bounce text-9xl font-bold text-green-600">
             IB
           </div>
         </div>
       ) : (
+        // Show the actual content once loading is false
         <div className="flex-1 overflow-auto">
-          <div className="space-y-16">
-            {/* Responsive Home Section */}
-            <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <Home />
-            </section>
-
-            {/* Responsive About Section */}
-            <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <About />
-            </section>
-
-            {/* Responsive Skills Section */}
-            <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <Skills />
-            </section>
-
-            {/* Responsive Projects Section */}
-            <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <Projects />
-            </section>
-
-            {/* Responsive Contact Section */}
-            <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <Contact />
-            </section>
-          </div>
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
         </div>
       )}
     </div>
