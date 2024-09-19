@@ -11,7 +11,7 @@ const About = () => {
             INTERACTIVE FRONTEND DEVELOPMENT
           </h1>
           <p className="text-gray-500 text-base sm:text-xl">
-            I'm proficient in frontend technologies like React.js, styled-components, and Tailwind CSS. I focus on creating responsive UIs...
+          I&apos;m proficient in frontend technologies like React.js, styled-components, and Tailwind CSS. I focus on creating responsive UIs, leveraging animations and transitions for smooth user experiences. My projects are structured with reusable components, ensuring clean, scalable code
           </p>
         </div>
         {/* Backend Development */}
@@ -20,7 +20,7 @@ const About = () => {
             INTERACTIVE BACKEND DEVELOPMENT
           </h1>
           <p className="text-gray-500 text-base sm:text-xl">
-            In backend development, I specialize in Node.js and Express.js, focusing on building robust APIs...
+          In backend development, I specialize in Node.js and Express.js, focusing on building robust APIs. With strong expertise in MongoDB, I ensure efficient and scalable database management. My backend work includes seamless data flow and secure authentication systems.
           </p>
         </div>
         {/* MERN Stack */}
@@ -29,8 +29,7 @@ const About = () => {
             ASK ME ABOUT THE MERN STACK
           </h1>
           <p className="text-gray-500 text-base sm:text-xl">
-            As a full-stack developer, I excel at integrating React and Express to deliver dynamic, secure web applications...
-          </p>
+          As a full-stack developer, I excel at integrating React and Express to deliver dynamic, secure web applications. I handle both client-side and server-side development, ensuring solutions are user-friendly and technically sound.          </p>
         </div>
       </div>
     </div>
