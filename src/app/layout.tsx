@@ -16,16 +16,14 @@ const oswald = Oswald({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={oswald.className}>
-      <Head>
-        {/* Add the viewport meta tag */}
+      <Head> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Other meta tags or links can go here */}
       </Head>
       <body className="flex flex-col h-screen">
         <Provider store={store}>
           <div className="flex flex-1">
             {/* Sidebar */}
-            <div className="w-72 lg:w-1/4 bg-gray-200 dark:bg-gray-800">
+            <div className="w-72 lg:w-1/4 hidden bg-gray-200 dark:bg-gray-800">
               <Sidebar />
             </div>
 
