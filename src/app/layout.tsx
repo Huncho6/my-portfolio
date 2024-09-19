@@ -1,7 +1,6 @@
 "use client";
 import "./globals.css";
 import { Oswald } from 'next/font/google';
-// import Sidebar from "@/components/Sidebar";
 import { Provider } from "react-redux";
 import { store } from "../app/store";
 import Footer from "@/components/Footer";
@@ -15,18 +14,20 @@ const oswald = Oswald({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={oswald.className}>
-      <body className="flex h-screen">
+      <body className="flex flex-col h-screen">
         <Provider store={store}>
-          {/* Sidebar */}
-          <div className="w-72">
-            {/* <Sidebar /> */}
-          </div>
+          <div className="flex flex-1">
+            {/* Sidebar */}
+            <div className="w-72 lg:w-1/4 bg-gray-200 dark:bg-gray-800">
+              {/* <Sidebar /> */}
+            </div>
 
-          {/* Main content area */}
-          <div className="flex-1 overflow-auto p-4">
-            {children}
-            <Footer />
-            <ToggleButton />
+            {/* Main content area */}
+            <main className="flex-1 overflow-auto p-4">
+              {children}
+              <Footer />
+              <ToggleButton />
+            </main>
           </div>
         </Provider>
       </body>
