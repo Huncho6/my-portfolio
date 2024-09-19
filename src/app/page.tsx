@@ -6,6 +6,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 
+
 export default function Main() {
   const [loading, setLoading] = useState(true);
 
@@ -20,7 +21,7 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div>
       {loading ? (
         // Show the spinner while loading is true
         <div className="flex items-center justify-center h-screen">

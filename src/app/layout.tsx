@@ -1,12 +1,11 @@
-"use client";
-import "./globals.css";
+import './globals.css';
 import { Oswald } from 'next/font/google';
-import { Provider } from "react-redux";
-import { store } from "../app/store";
-import Footer from "@/components/Footer";
-import ToggleButton from "@/components/ToggleButton";
-import Sidebar from "@/components/Sidebar";
-import { Head } from "next/document";
+import { Provider } from 'react-redux';
+import { store } from '../app/store';
+import Footer from '@/components/Footer';
+import ToggleButton from '@/components/ToggleButton';
+import Sidebar from '@/components/Sidebar';
+import Head from 'next/head'; // Import from 'next/head'
 
 const oswald = Oswald({
   subsets: ['latin'],
@@ -16,9 +15,11 @@ const oswald = Oswald({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={oswald.className}>
-       <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        </Head>
+      <Head>
+        {/* Add the viewport meta tag */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* Other meta tags or links can go here */}
+      </Head>
       <body className="flex flex-col h-screen">
         <Provider store={store}>
           <div className="flex flex-1">
