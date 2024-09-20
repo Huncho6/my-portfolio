@@ -149,8 +149,8 @@ const Sidebar = () => {
 
         {/* Download CV Button */}
         <div className="mt-8">
-          <a
-            href="/.pdf"
+          <Link
+            href="https://drive.google.com/file/d/19oflW7YQoY38l192CVuF6EmbSMeTBCSp/view?usp=sharing"
             download
             className={`py-2 px-4 rounded-lg text-center block ${
               isDarkMode
@@ -159,7 +159,7 @@ const Sidebar = () => {
             }`}
           >
             Download CV
-          </a>
+          </Link>
         </div>
       </div>
     </div>

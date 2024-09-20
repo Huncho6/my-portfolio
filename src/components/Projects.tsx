@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { useAppSelector } from "@/app/hooks";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -64,7 +65,7 @@ const Projects = () => {
         {/* Image */}
         <div className="w-full sm:w-1/3 h-64 sm:h-full">
           <img 
-            src="https://res-console.cloudinary.com/dh60kpxg5/thumbnails/v1/image/upload/v1726192994/a2lja3NfcjV4aDhw/preview" 
+            src="https://res.cloudinary.com/dh60kpxg5/image/upload/v1726848934/kickaaa_dehiat.png" 
             alt="E-commerce" 
             className="w-full h-full object-cover" 
           />
@@ -78,7 +79,7 @@ const Projects = () => {
               Developed a modern, React-based e-commerce platform with a sleek, minimalist design. The platform includes dynamic product listings and responsive navigation.
             </p>
           </div>
-          <a href="https://ec-react-one.vercel.app/" target="_blank" className="text-green-500 font-bold hover:underline">View More →</a>
+          <Link href="https://ec-react-one.vercel.app/" target="_blank" className="text-green-500 font-bold hover:underline">View More →</Link>
         </div>
 
         {/* Date Badge */}
@@ -96,7 +97,7 @@ const Projects = () => {
         {/* Image */}
         <div className="w-full sm:w-1/3 h-64 sm:h-full">
           <img 
-            src="https://res-console.cloudinary.com/dh60kpxg5/thumbnails/v1/image/upload/v1726192813/dGljX3BqcHRocw==/preview" 
+            src="https://res.cloudinary.com/dh60kpxg5/image/upload/v1726848934/tictac_ub60t6.png" 
             alt="Tic-Tac-Toe" 
             className="w-full h-full object-cover" 
           />
@@ -110,7 +111,7 @@ const Projects = () => {
               Built an interactive Tic-Tac-Toe game using React, featuring a clean and straightforward design.
             </p>
           </div>
-          <a href="https://tic-tac-toe-lime-phi.vercel.app/" target='_blank' className="text-green-500 font-bold hover:underline">View More →</a>
+          <Link href="https://tic-tac-toe-lime-phi.vercel.app/" target='_blank' className="text-green-500 font-bold hover:underline">View More →</Link>
         </div>
 
         {/* Date Badge */}
@@ -142,7 +143,7 @@ const Projects = () => {
               Developed a dynamic movie browsing application using React and Vite. Users can search for movies, view details, and watch trailers.
             </p>
           </div>
-          <a href="https://movies-client-blond.vercel.app/" target="_blank" className="text-green-500 font-bold hover:underline">View More →</a>
+          <Link href="https://movies-client-blond.vercel.app/" target="_blank" className="text-green-500 font-bold hover:underline">View More →</Link>
         </div>
 
         {/* Date Badge */}

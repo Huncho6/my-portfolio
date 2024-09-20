@@ -1,5 +1,6 @@
 "use client";
 import { useAppSelector } from '@/app/hooks';
+import Link from 'next/link';
 
 const Home = () => {
   const isDarkMode = useAppSelector((state) => state.theme.isDarkMode); 
@@ -23,7 +24,7 @@ const Home = () => {
         {/* Responsive Button */}
         <div className="animate-fade-in-scale" style={{ animationDelay: "0.5s" }}>
           <button className="bg-tertiary hover:bg-purple-600 w-full sm:w-48 h-[50px] rounded-full mb-12">
-            Download Resume
+            <Link href="https://drive.google.com/file/d/19oflW7YQoY38l192CVuF6EmbSMeTBCSp/view?usp=sharing">Download Resume</Link>
           </button>
         </div>
 
