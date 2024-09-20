@@ -1,10 +1,9 @@
 "use client";
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const About = () => {
   // Controls for triggering animations
-  const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.1 }); // Trigger animation when 10% of the component is visible
 
   // Animation variants for smooth entrance
