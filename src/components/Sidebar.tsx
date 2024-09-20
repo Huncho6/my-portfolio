@@ -29,7 +29,7 @@ const Sidebar = () => {
     <div className="relative h-screen">
       {/* Hamburger Icon for small screens */}
       <div className="fixed top-4 left-4 md:hidden" style={{ zIndex: 1000 }}>
-        <button onClick={toggleSidebar} className="text-3xl absolute z-20 top-0">
+        <button onClick={toggleSidebar} className="text-3xl absolute z-20 top-0 ">
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>

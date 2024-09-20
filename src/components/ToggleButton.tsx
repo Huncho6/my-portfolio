@@ -1,17 +1,42 @@
-// components/ToggleButton.tsx
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { toggleTheme } from '@/features/theme/themeSlice';
+import { toggleTheme, setTheme } from '@/features/theme/themeSlice'; 
 import { FaToggleOff } from 'react-icons/fa';
 
 const ToggleButton: React.FC = () => {
   const dispatch = useAppDispatch();
   const isDarkMode = useAppSelector((state) => state.theme.isDarkMode);
+  
+  const [mounted, setMounted] = useState(false);  // State to track when component has mounted
 
-  React.useEffect(() => {
+  // Set mounted to true after component mounts
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;  // Only proceed if the component is mounted
+    
+    const savedTheme = localStorage.getItem('theme');
+    console.log('Loaded theme from localStorage:', savedTheme);
+    if (savedTheme === 'dark') {
+      dispatch(setTheme(true));  // Set dark mode if saved as dark
+    } else {
+      dispatch(setTheme(false)); // Set light mode if saved as light
+    }
+  }, [dispatch, mounted]);
+
+  // Apply theme and save to localStorage only if the component is mounted
+  useEffect(() => {
+    if (!mounted) return;
+
     document.body.classList.toggle('dark', isDarkMode);
-  }, [isDarkMode]);
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    console.log('Saved theme to localStorage:', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode, mounted]);
+
+  if (!mounted) return null;  // Avoid rendering the button until mounted
 
   return (
     <button

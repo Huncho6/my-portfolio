@@ -1,5 +1,5 @@
 module.exports = {
-  darkMode: 'media', // or 'media' if you prefer media query-based dark mode
+  darkMode: 'class', // or 'media' if you prefer media query-based dark mode
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",

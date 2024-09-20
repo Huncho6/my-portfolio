@@ -5,9 +5,11 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import { useAppSelector } from "./hooks";
 
 
 export default function Main() {
+  const isDarkMode = useAppSelector((state) => state.theme.isDarkMode); 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ export default function Main() {
     <div>
       {loading ? (
         // Show the spinner while loading is true
-        <div className="flex items-center justify-center h-screen">
+        <div className={`flex items-center justify-center h-screen ${isDarkMode ? 'bg-black text-green-900' : 'bg-white text-green-900'}`}>
           <div className="animate-bounce text-9xl font-bold text-green-600">
             IB
           </div>
