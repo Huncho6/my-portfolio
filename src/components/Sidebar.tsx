@@ -26,7 +26,7 @@ const Sidebar = () => {
   }, [texts.length]);
 
   return (
-    <div className="relative h-screen dark:bg-gray-800">
+    <div className="relative h-screen">
       {/* Hamburger Icon for small screens */}
       <div className="fixed top-4 left-4 md:hidden" style={{ zIndex: 1000 }}>
         <button onClick={toggleSidebar} className="text-3xl absolute z-20 top-0 bg-purple-700">
@@ -38,7 +38,7 @@ const Sidebar = () => {
       <div
         className={`fixed top-0 left-0 h-screen w-64 p-4 z-40 transition-transform transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 ${isDarkMode ? "bg-gray-900 text-gray-100" : "bg-white text-black"} 
+        } md:translate-x-0 ${isDarkMode ? "bg-secondary text-gray-100" : "bg-white text-black"} 
         md:static md:flex md:flex-col md:w-64 overflow-auto`}
       >
         {/* Profile Image */}

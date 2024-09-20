@@ -17,7 +17,7 @@ const Home = () => {
 
         {/* Responsive Subheading */}
         <h1 className={`text-3xl sm:text-4xl lg:text-5xl font-bold mb-10 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>
-          FULLSTACK DEVELOPER
+         A FULLSTACK DEVELOPER
         </h1>
 
         {/* Responsive Button */}
