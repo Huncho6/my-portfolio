@@ -30,7 +30,7 @@ const Home = () => {
 
         {/* Responsive Paragraph */}
         <p className={`text-base sm:text-lg lg:text-xl mb-10 max-w-full sm:max-w-2xl lg:max-w-3xl ${isDarkMode ? 'text-gray-500' : 'text-secondary'}`}>
-          I&apos;m a passionate full-stack developer focused on building dynamic web applications. With experience in both frontend and backend development, I create efficient, scalable solutions. My work is driven by a love for problem-solving and delivering seamless user experiences.
+        I&apos;m a passionate and eager-to-learn full-stack developer focused on building dynamic web applications. With a foundational understanding of both frontend and backend development, I aim to create efficient, scalable solutions. As a fast learner, I&apos;m excited to grow my skills and gain hands-on experience through internships or entry-level opportunities. My love for problem-solving and delivering seamless user experiences drives my work, and I look forward to learning and contributing throughout the process. 
         </p>
       </div>
     </div>

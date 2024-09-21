@@ -76,15 +76,6 @@ const Contact = () => {
           Submit
         </button>
       </div>
-
-      {/* Image Section */}
-      <div className="flex justify-center mt-8">
-        <img 
-          src="https://res.cloudinary.com/dh60kpxg5/image/upload/v1726200865/agege_xh6z2g.png" 
-          alt="Agege" 
-          className="rounded-md shadow-lg animate-fade-in-scale max-w-full sm:w-auto"
-        />
-      </div>
     </div>
   );
 }
